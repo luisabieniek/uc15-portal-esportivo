@@ -11,4 +11,11 @@ add_action('wp_enqueue_scripts', function () {
         array('quadra-aberta-pai'),
         wp_get_theme()->get('Version')
     );
+
+    wp_enqueue_style(
+        'quadra-aberta-custom',
+        get_stylesheet_directory_uri() . '/custom.css',
+        array('quadra-aberta-filho'),
+        '1.0.0'
+    );
 });
