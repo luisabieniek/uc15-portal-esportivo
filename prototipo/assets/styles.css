@@ -125,7 +125,7 @@ button:focus:not(:focus-visible) {
 }
 
 /* 4. CABEÇALHO E NAVEGAÇÃO */
-body > a:first-child {
+body>a:first-child {
     display: inline-block;
     margin: var(--space-2);
 }
@@ -176,7 +176,7 @@ main {
     padding-block: var(--space-5);
 }
 
-main > section {
+main>section {
     margin-block: var(--space-5);
     padding: var(--space-4);
     background: var(--color-surface);
@@ -188,7 +188,7 @@ article {
     padding-block: var(--space-3);
 }
 
-article + article {
+article+article {
     border-top: var(--border-width) solid var(--color-border);
 }
 
@@ -313,7 +313,7 @@ details[open] summary {
 }
 
 /* 9. LINK PARA PULAR AO CONTEÚDO */
-body > a:first-child {
+body>a:first-child {
     position: absolute;
     top: 0;
     left: var(--space-2);
@@ -324,7 +324,7 @@ body > a:first-child {
     transform: translateY(-150%);
 }
 
-body > a:first-child:focus {
+body>a:first-child:focus {
     position: relative;
     transform: translateY(0);
 }
@@ -350,7 +350,7 @@ footer a {
         padding-block: var(--space-6);
     }
 
-    main > section {
+    main>section {
         padding: var(--space-5);
         margin-block: var(--space-6);
     }
@@ -399,7 +399,7 @@ iframe {
 }
 
 main,
-main > section,
+main>section,
 article,
 header,
 footer {
@@ -432,7 +432,7 @@ main {
 }
 
 /* Remove margens anteriores para o Grid controlar o espaçamento */
-main > section {
+main>section {
     min-width: 0;
     margin: 0;
 }
@@ -495,7 +495,7 @@ button {
         grid-column: 1 / -1;
     }
 
-    main > section {
+    main>section {
         height: auto;
     }
 }
@@ -516,15 +516,13 @@ button {
 /* Gradiente decorativo: o texto continua legível sem ele */
 header {
     background-color: var(--color-primary);
-    background-image: linear-gradient(
-        135deg,
-        #174b36,
-        #28664b
-    );
+    background-image: linear-gradient(135deg,
+            #174b36,
+            #28664b);
 }
 
 /* Cards com profundidade sutil */
-main > section {
+main>section {
     box-shadow: 0 2px 8px rgb(32 40 32 / 8%);
     transition:
         box-shadow var(--transition-normal),
@@ -533,7 +531,7 @@ main > section {
 
 /* Transform é apenas visual e não altera o fluxo do documento */
 @media (hover: hover) and (pointer: fine) {
-    main > section:hover {
+    main>section:hover {
         border-color: #8da596;
         box-shadow: 0 5px 14px rgb(32 40 32 / 12%);
     }
@@ -578,7 +576,7 @@ summary:focus-visible {
         border-bottom: 2px solid CanvasText;
     }
 
-    main > section {
+    main>section {
         box-shadow: none;
     }
 
@@ -609,7 +607,7 @@ summary:focus-visible {
         transform: none;
     }
 
-    main > section:hover {
+    main>section:hover {
         transform: none;
     }
 }
@@ -639,7 +637,7 @@ h3 {
 
 /* Evita que campos e componentes excedam seus contêineres */
 main,
-main > section,
+main>section,
 article,
 form,
 table {
@@ -670,6 +668,7 @@ a {
 
 /* BREAKPOINT 1: celulares estreitos e telas pequenas */
 @media (max-width: 24rem) {
+
     header,
     footer {
         padding: var(--space-3);
@@ -680,7 +679,7 @@ a {
         gap: var(--space-3);
     }
 
-    main > section {
+    main>section {
         padding: var(--space-3);
     }
 
@@ -747,33 +746,120 @@ article {
 }
 
 
-#inicio > img {
+#inicio>img {
     display: block;
     width: 100%;
     max-width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: var(--radius-medium);
-  }
+}
 
-  
-  
+
+
 .botao-destaque {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-  background-color: var(--color-primary);
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: var(--radius-medium);
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: var(--radius-medium);
 }
 
 .botao-destaque:hover {
-  background-color: var(--color-primary-hover);
+    background-color: var(--color-primary-hover);
 }
 
 .botao-destaque:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+}
+
+
+/* T06 — personalização controlada do Bootstrap */
+:root {
+    --bs-success: #174b36;
+    --bs-success-rgb: 23, 75, 54;
+    --bs-focus-ring-color: rgba(163, 75, 0, 0.5);
+}
+
+.btn-success {
+    --bs-btn-bg: #174b36;
+    --bs-btn-border-color: #174b36;
+    --bs-btn-hover-bg: #103927;
+    --bs-btn-hover-border-color: #103927;
+    --bs-btn-active-bg: #103927;
+    --bs-btn-active-border-color: #103927;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #174b36;
+    background-color: #eaf0eb;
+}
+
+.accordion-button:focus,
+.btn:focus-visible,
+a:focus-visible {
+    outline: 3px solid #a34b00;
+    outline-offset: 3px;
+    box-shadow: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+[data-favorito][aria-pressed="true"] {
+    font-weight: bold;
+}
+
+#areaGaleria {
+    touch-action: pan-y;
+    user-select: none;
+}
+
+#areaGaleria article {
+    min-height: 8rem;
+    padding: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 0.5rem;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+    outline: 3px solid #a34b00;
+    outline-offset: 3px;
+}
+
+
+/* Organização vertical das seções principais */
+main#conteudo {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 2rem;
+    width: 100%;
+}
+
+main#conteudo > section {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: 0;
+}
+
+/* Imagens e tabelas respeitam a largura da página */
+main#conteudo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.tabela-responsiva {
+    max-width: 100%;
+    overflow-x: auto;
 }
 
