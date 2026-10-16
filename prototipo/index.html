@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <meta name="description"
+        content="Portal fictício para acompanhar notícias, calendário e classificação de uma temporada esportiva.">
+    <title>Portal Esportivo — Temporada 2026</title>
+</head>
+
+<body>
+    <a href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header>
+        <h1>Portal Esportivo</h1>
+        <p>Acompanhe a temporada esportiva de 2026.</p>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="#inicio">Início </a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#calendario">Calendário</a></li>
+                <li><a href="#classificacao">Classificação</a></li>
+                <li><a href="#favoritos">Favoritos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <section id="inicio" aria-labelledby="titulo-destaque">
+            <h2 id="titulo-destaque">Destaque da temporada</h2>
+
+
+            <img src="assets/destaque-futebol.png"
+                alt="Bola de futebol no gramado de um estádio, com as arquibancadas ao fundo" width="1536" height="1024"
+                fetchpriority="high">
+
+
+            <article>
+                <p><strong>Conteúdo fictício para demonstração.</strong></p>
+                <h3>Temporada 2026 começa com novas equipes</h3>
+                <p>
+                    A temporada fictícia reúne equipes em uma disputa
+                    acompanhada por notícias, resultados e classificação.
+                </p>
+                <a href="#noticias">Ler mais notícias</a>
+            </article>
+        </section>
+
+        <section id="noticias" aria-labelledby="titulo-noticias">
+            <h2 id="titulo-noticias">Últimas notícias</h2>
+
+            <article>
+                <h3>Equipe Horizonte confirma participação</h3>
+                <p>
+                    A equipe fictícia Horizonte está confirmada
+                    para a próxima rodada.
+                </p>
+                <p><small>Conteúdo demonstrativo.</small></p>
+            </article>
+
+            <article>
+                <h3>Preparação para a próxima rodada</h3>
+                <p>
+                    As equipes se preparam para os próximos
+                    confrontos da temporada.
+                </p>
+                <p><small>Conteúdo demonstrativo.</small></p>
+            </article>
+        </section>
+
+        <section id="calendario" aria-labelledby="titulo-calendario">
+            <h2 id="titulo-calendario">Calendário de jogos</h2>
+
+            <ul>
+                <li>
+                    <time datetime="2026-11-01">01/11/2026</time> —
+                    Horizonte x Aurora — 15h
+                </li>
+                <li>
+                    <time datetime="2026-11-08">08/11/2026</time> —
+                    Aurora x Estrela — 16h
+                </li>
+                <li>
+                    <time datetime="2026-11-15">15/11/2026</time> —
+                    Estrela x Horizonte — 15h
+                </li>
+            </ul>
+            <p>Datas e confrontos fictícios.</p>
+        </section>
+
+        <section id="classificacao" aria-labelledby="titulo-classificacao">
+            <h2 id="titulo-classificacao">Classificação</h2>
+
+            <div>
+                <table>
+                    <caption>Classificação fictícia da temporada</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Posição</th>
+                            <th scope="col">Equipe</th>
+                            <th scope="col">Pontos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1º</td>
+                            <td>Horizonte</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>2º</td>
+                            <td>Aurora</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>3º</td>
+                            <td>Estrela</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Pontuação ilustrativa, sem relação com competições reais.</p>
+        </section>
+
+        <section id="favoritos" aria-labelledby="titulo-favoritos">
+            <h2 id="titulo-favoritos">Seus favoritos</h2>
+            <p>
+                Nesta versão inicial, a área apresenta a estrutura
+                de favoritos. O armazenamento será definido em uma
+                etapa posterior, conforme os requisitos do projeto.
+            </p>
+        </section>
+
+        <section id="busca" aria-labelledby="titulo-busca">
+            <h2 id="titulo-busca">Buscar conteúdo</h2>
+
+            <form action="#noticias" method="get">
+                <label for="consulta">Digite o que deseja encontrar:</label>
+                <input type="search" id="consulta" name="consulta" placeholder="Ex.: notícias, equipes">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <p>
+                A busca visual está estruturada. A filtragem real
+                do conteúdo será implementada em uma etapa posterior.
+            </p>
+        </section>
+
+        <section id="contato" aria-labelledby="titulo-contato">
+            <h2 id="titulo-contato">Receba novidades</h2>
+
+            <form action="#contato" method="get">
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" required>
+                </p>
+
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required
+                        aria-describedby="aviso-email">
+                    <small id="aviso-email">
+                        Informe um endereço de e-mail válido.
+                    </small>
+                </p>
+
+                <button type="submit">Enviar cadastro demonstrativo</button>
+            </form>
+
+            <p>
+                Formulário demonstrativo: não envia dados para
+                um servidor nem armazena informações.
+            </p>
+        </section>
+
+        <section aria-labelledby="titulo-ajuda">
+            <h2 id="titulo-ajuda">Informações adicionais</h2>
+
+            <details>
+                <summary>Sobre este portal</summary>
+                <p>
+                    Este é um protótipo acadêmico com conteúdo fictício.
+                    Recursos interativos poderão ser aprimorados
+                    progressivamente com JavaScript.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Projeto acadêmico UC15 — Portal Esportivo.
+            Temporada e dados fictícios.
+        </p>
+        <a href="#conteudo">Voltar ao início do conteúdo</a>
+    </footer>
+</body>
+
+</html>
