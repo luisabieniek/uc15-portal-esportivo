@@ -1,0 +1,32 @@
+/* Quadra Aberta — personalização visual */
+
+:root {
+    --qa-fundo: #f5f7fa;
+    --qa-texto: #172033;
+    --qa-primaria: #176b43;
+    --qa-borda: #dce3ea;
+}
+
+body {
+    color: var(--qa-texto);
+    background-color: var(--qa-fundo);
+}
+
+a {
+    color: var(--qa-primaria);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button,
+input[type="submit"],
+.wp-element-button {
+    border-radius: 6px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
